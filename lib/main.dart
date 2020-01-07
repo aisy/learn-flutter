@@ -7,33 +7,49 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // implementasi Material
-    var scaffold = Scaffold(
-      // appBar: AppBar(title: Text("Hello")),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          width: 250,
-          decoration: new BoxDecoration(
-              color: Colors.blue,
-              borderRadius: new BorderRadius.only(
-                  topLeft: const Radius.circular(40.0),
-                  topRight: const Radius.circular(40.0),
-                  bottomRight: const Radius.circular(40.0),
-                  bottomLeft: const Radius.circular(40.0))),
-          child: Text(
-            "Reprehenderit enim mollit est esse do esse magna incididunt eu eiusmod aute reprehenderit nisi. In enim duis quis amet id sint mollit. Cupidatat quis proident fugiat sunt sit ea esse pariatur pariatur ut cupidatat fugiat commodo. Nostrud velit sit Lorem sit non. Duis nulla exercitation id irure laborum enim nostrud adipisicing.",
-            maxLines: 5,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+    // Membuat Widget bubble
+    Widget titleSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: Row(
+        children: [
+          Expanded(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Container(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Text(
+                  'Oeschinen Lake Campground',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              Text(
+                'kandersteg, Switzerland',
+                style: TextStyle(color: Colors.grey[500]),
+              ),
+            ]),
           ),
-        ),
+          Icon(
+            Icons.star,
+            color: Colors.red[500],
+          ),
+          Text('41'),
+        ],
       ),
     );
-    return MaterialApp(
-      // membuat halaman dengan isi appBar dan body
-      home: scaffold,
+
+    Widget detailSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: Text(
+        "Do consequat cillum do est excepteur reprehenderit adipisicing commodo culpa consequat. Occaecat sit magna cupidatat commodo aute elit aliquip. Occaecat adipisicing elit non dolor excepteur Lorem excepteur commodo sint. Mollit occaecat culpa enim culpa aute. Laboris qui exercitation ad ipsum minim ad anim.",
+        softWrap: true,
+      ),
     );
+    //
+    return MaterialApp(
+        // membuat halaman dengan isi appBar dan body
+        home: Scaffold(
+            body: ListView(
+      children: [titleSection, detailSection],
+    )));
   }
 }
