@@ -1,3 +1,4 @@
+import 'package:eleven_guitar/widgets/appBarMain.dart';
 import 'package:flutter/material.dart';
 
 // Main function yang menjalankan class MyApp
@@ -25,10 +26,41 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    Widget buttonIncrease = RaisedButton(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Text("tambah bilangan"),
+      color: Colors.blue,
+      textColor: Colors.white,
+      padding: EdgeInsets.all(15),
+      onPressed: tambahBil,
+    );
+
+    Widget buttonNull = RaisedButton(
+      child: Text("reset"),
+      color: Colors.red,
+      textColor: Colors.white,
+      padding: EdgeInsets.all(15),
+      onPressed: resetBil,
+    );
+
+    Widget cardData = Card(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const ListTile(
+            leading: Icon(Icons.album),
+            title: Text("a Card"),
+            subtitle: Text("asdsadasd asdsad asd asd sad sad "),
+          )
+        ],
+      ),
+    );
+
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Yeaaaaah ALiii"),
+        appBar: AppBarMain(
+          title: Text('ini appBar'),
+          appBar: AppBar(),
         ),
         body: Center(
           child: Column(
@@ -39,22 +71,12 @@ class _MyAppState extends State<MyApp> {
                 style: TextStyle(fontSize: 80),
               ),
               SizedBox(height: 10),
-              RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text("tambah bilangan"),
-                color: Colors.blue,
-                textColor: Colors.white,
-                padding: EdgeInsets.all(15),
-                onPressed: tambahBil,
-              ),
+              buttonIncrease,
               SizedBox(height: 10),
-              RaisedButton(
-                child: Text("reset"),
-                color: Colors.red,
-                textColor: Colors.white,
-                padding: EdgeInsets.all(15),
-                onPressed: resetBil,
+              buttonNull,
+              Container(
+                padding: EdgeInsets.all(20),
+                child: cardData,
               )
             ],
           ),
