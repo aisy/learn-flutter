@@ -1,3 +1,4 @@
+import 'package:eleven_guitar/widgets/CardMenu.dart';
 import 'package:eleven_guitar/widgets/appBarMain.dart';
 import 'package:flutter/material.dart';
 
@@ -43,19 +44,6 @@ class _MyAppState extends State<MyApp> {
       onPressed: resetBil,
     );
 
-    Widget cardData = Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            leading: Icon(Icons.album),
-            title: Text("a Card"),
-            subtitle: Text("asdsadasd asdsad asd asd sad sad "),
-          )
-        ],
-      ),
-    );
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBarMain(
@@ -76,7 +64,12 @@ class _MyAppState extends State<MyApp> {
               buttonNull,
               Container(
                 padding: EdgeInsets.all(20),
-                child: cardData,
+                child: CardMenu(
+                  title: Text(
+                    "TV",
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
               )
             ],
           ),
