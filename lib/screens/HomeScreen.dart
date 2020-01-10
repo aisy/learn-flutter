@@ -1,4 +1,3 @@
-import 'package:eleven_guitar/commons/AppBarMain.dart';
 import 'package:eleven_guitar/commons/CardMenu.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarMain(),
+      appBar: AppBar(
+        title: Text("data"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
