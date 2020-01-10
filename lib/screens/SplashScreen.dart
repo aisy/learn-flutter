@@ -34,18 +34,26 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "data",
-              style: TextStyle(
-                fontSize: 40,
-                color: Colors.white,
-              ),
+            Image.asset(
+              "images/Facebook_Lab_Innovation_Indonesia.png",
+              height: 80,
             ),
+            // Text(
+            //   "data",
+            //   style: TextStyle(
+            //     fontSize: 40,
+            //     color: Colors.white,
+            //   ),
+            // ),
             SizedBox(height: 10),
-            CircularProgressIndicator(
-              backgroundColor: Colors.blueGrey[300],
-              valueColor:
-                  new AlwaysStoppedAnimation<Color>(Colors.blueGrey[50]),
+            SizedBox(
+              width: 30,
+              height: 30,
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.blueGrey[300],
+                valueColor: new AlwaysStoppedAnimation(Colors.blueGrey[50]),
+                strokeWidth: 4.0,
+              ),
             ),
           ],
         ),
