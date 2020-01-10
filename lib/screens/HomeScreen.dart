@@ -1,3 +1,4 @@
+import 'package:eleven_guitar/commons/AppBarMain.dart';
 import 'package:eleven_guitar/commons/CardMenu.dart';
 import 'package:flutter/material.dart';
 
@@ -25,9 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[600],
-        title: Text("data"),
+      appBar: AppBarMain(
+        appBar: AppBar(),
+        title: Text("Eleven Guitar"),
       ),
       body: Center(
         child: Column(
