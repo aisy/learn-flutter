@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   startSplashScreen() async {
-    var duration = const Duration(seconds: 3);
+    var duration = const Duration(seconds: 10);
     return Timer(duration, () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) {
@@ -29,8 +29,26 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[900],
       body: Center(
-        child: Text("data"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "data",
+              style: TextStyle(
+                fontSize: 40,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 10),
+            CircularProgressIndicator(
+              backgroundColor: Colors.blueGrey[300],
+              valueColor:
+                  new AlwaysStoppedAnimation<Color>(Colors.blueGrey[50]),
+            ),
+          ],
+        ),
       ),
     );
   }
