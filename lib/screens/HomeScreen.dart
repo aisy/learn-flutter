@@ -24,7 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[600],
         title: Text("data"),
       ),
       body: Center(
