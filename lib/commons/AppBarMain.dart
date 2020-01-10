@@ -2,7 +2,7 @@ import 'package:flutter/./material.dart';
 
 // untuk bisa di gunakan reusable component hrus implements PreferredSizeWidget
 class AppBarMain extends StatelessWidget implements PreferredSizeWidget {
-  final Color backgroundColor = Colors.blue;
+  final Color backgroundColor = Colors.blueGrey[600];
   final Text title;
   final AppBar appBar;
 
