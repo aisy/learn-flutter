@@ -27,23 +27,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    Widget buttonIncrease = RaisedButton(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Text("tambah bilangan"),
-      color: Colors.blue,
-      textColor: Colors.white,
-      padding: EdgeInsets.all(15),
-      onPressed: tambahBil,
-    );
-
-    Widget buttonNull = RaisedButton(
-      child: Text("reset"),
-      color: Colors.red,
-      textColor: Colors.white,
-      padding: EdgeInsets.all(15),
-      onPressed: resetBil,
-    );
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBarMain(
@@ -58,10 +41,6 @@ class _MyAppState extends State<MyApp> {
                 value.toString(),
                 style: TextStyle(fontSize: 80),
               ),
-              SizedBox(height: 10),
-              buttonIncrease,
-              SizedBox(height: 10),
-              buttonNull,
               Container(
                 padding: EdgeInsets.all(20),
                 child: CardMenu(
