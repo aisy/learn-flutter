@@ -30,23 +30,52 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(),
         title: Text("Eleven Guitar"),
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              value.toString(),
-              style: TextStyle(fontSize: 80),
-            ),
-            Container(
-              padding: EdgeInsets.all(20),
-              child: CardMenu(
-                title: Text(
-                  "TV",
-                  style: TextStyle(fontWeight: FontWeight.w600),
+            Row(
+              children: <Widget>[
+                CardMenu(
+                  icon: "alarm",
+                  title: Text(
+                    "TV",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
-              ),
-            )
+                CardMenu(
+                  title: Text(
+                    "TV",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                CardMenu(
+                  title: Text(
+                    "TV",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                CardMenu(
+                  title: Text(
+                    "TV",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
