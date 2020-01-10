@@ -1,5 +1,5 @@
-import 'package:eleven_guitar/widgets/CardMenu.dart';
-import 'package:eleven_guitar/widgets/appBarMain.dart';
+import 'package:eleven_guitar/commons/CardMenu.dart';
+import 'package:eleven_guitar/commons/appBarMain.dart';
 import 'package:flutter/material.dart';
 
 // Main function yang menjalankan class MyApp
